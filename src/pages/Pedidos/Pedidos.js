@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import { Picker } from 'react-native-web';
 
-export default function ComponentPicker(){
+export default function Pedidos(){
     const imagensPizza = {
         calabresa: 'https://www.receitasnestle.com.br/sites/default/files/styles/recipe_detail_desktop_new/public/srh_recipes/4ef71e576dd2c48bc6f075632240504b.webp?itok=GJauJyaW',
         portuguesa: 'https://www.receitasnestle.com.br/sites/default/files/styles/recipe_detail_desktop_new/public/srh_recipes/2eb7ece4ae9a67b773aa138589e2031d.webp?itok=8rB5qKP-',
@@ -19,16 +19,15 @@ export default function ComponentPicker(){
     return (
         <View style={styles.container}>
             <View style={styles.layout}>
-                
-                {/* Logo da Pizzaria */}
+             
                 <Image
-                    source={require('../../assets/pizza67.png')} 
+                    source={require('../../../assets/pizza67.png')}
                     style={styles.logoPizzaria}
                 />
                 
                 <Text style={styles.textoMenu}>Menu de Pizzas</Text>
                 
-                {/* Picker */}
+               
                 <Picker
                     selectedValue={sabor}
                     onValueChange={(itemValue) => setSabor(itemValue)}
