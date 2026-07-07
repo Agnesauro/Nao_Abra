@@ -6,6 +6,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Home from './src/pages/Home/Home';
 import Sobre from './src/pages/Sobre/Sobre';
 import Pedidos from './src/pages/Pedidos/Pedidos';
+import Login from './src/pages/Login/Login';
+import ComponentStorage from './src/pages/Components/ComponentStorage';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Feather } from '@expo/vector-icons';
 
@@ -43,6 +45,15 @@ export default function App() {
             }
           }}
           />
+          <Tab.Screen
+          name='Login'
+          component={Login}
+          options={{
+            tabBarIcon: ({color, size}) =>{
+              return <Feather name='log-in' color={color} size={size}/>
+            }
+          }}
+          />
         </Tab.Navigator>
       </NavigationContainer>
     </View>
@@ -54,4 +65,5 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#f5f5f5',
   },
+
 });
